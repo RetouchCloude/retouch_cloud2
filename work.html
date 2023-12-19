@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/twentytwenty-no-compass.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+
+
+    <link rel="media stylesheet" href="css/media.css">
+
+    <title>Retouching Cloud</title>
+    <style>
+      /* Custom styles for pagination dots */
+    .custom-pagination-dots {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .custom-pagination-dots button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background-color: transparent;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .custom-pagination-dots button.slick-active {
+      background-color: #fff;
+    }
+
+
+    #gallery {
+  padding-top: 40px;
+}
+
+@media screen and (min-width: 991px) {
+  #gallery {
+    padding: 60px 30px 0 30px;
+  }
+}
+
+.img-wrapper {
+    position: relative;
+    margin-top: 15px;
+    margin-right: -7px;
+}
+
+.img-wrapper img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.img-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  border-radius: 20px;
+}
+
+.img-overlay i {
+  color: #fff;
+  font-size: 3em;
+}
+
+#overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#overlay img {
+  margin: 0;
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  padding: 5%;
+}
+
+@media screen and (min-width: 768px) {
+  #overlay img {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #overlay img {
+    width: 50%;
+  }
+}
+
+#nextButton,
+#prevButton,
+#exitButton {
+  color: #fff;
+  font-size: 2em;
+  transition: opacity 0.8s;
+}
+
+#nextButton:hover,
+#prevButton:hover,
+#exitButton:hover {
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 768px) {
+  #nextButton,
+  #prevButton,
+  #exitButton {
+    font-size: 3em;
+  }
+}
+
+#exitButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+
+#process .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fcfcfc;
+    border:none;
+}
+
+    </style>
+
+  </head>
+
+  <body>
+    <!-- header -->
+   <header class="header ">
+    <div class="container d-flex">
+       <div class="language">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Language
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">English</a></li>
+            <li><a class="dropdown-item" href="#">Bengali</a></li>
+            <li><a class="dropdown-item" href="#">France</a></li>
+            <li><a class="dropdown-item" href="#">Portuguish</a></li>
+          </ul>
+       </div>
+       <div class="fac ms-auto d-flex pt-2 px-2">
+       <span><a href="">FAQ </a></span>
+       <span><a href=""> Contacts </a></span>
+       <span><a href=""> <i class="fa fa-phone" aria-hidden="true"></i></a></span>
+       <span><a href=""> <i class="fa fa-user-circle" aria-hidden="true"></i></a></span>
+    </div>
+   </header>
+    <!-- header -->
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light nav-menu" id="menu">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="" srcset="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                      <!-- Navbar dropdown -->
+        <li class="nav-item dropdown dropdown-hover position-static">
+          <a class="nav-link" href="" id="navbarDropdown" role="button"
+             aria-expanded="false">
+            Services
+          </a>
+          <!-- Dropdown menu -->
+          <div class="dropdown-menu w-40 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                            border-top-right-radius: 0;
+                          ">
+
+            <div class="container">
+              <div class="row my-4">
+                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item a" href="#">Shadow Making</a>
+                    <a class="list-group-item a" href="clipping_path.html">Clipping Path</a>
+                    <a class="list-group-item a" href="hair.html">Hair Masking</a>
+                    <a class="list-group-item a" href="background.html">Background Removal</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item a" href="image_recolor.html">Image Recolor</a>
+                    <a class="list-group-item a" href="headshot.html">Headshot Retouching</a>
+                    <a class="list-group-item a" href="ecommerce.html">E-commerce Image Editing</a>
+                    <a class="list-group-item a" href="crop.html">Crope & Resize</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item a" href="baby_retouch.html">Baby Retouching</a>
+                    <a class="list-group-item a" href="ghost.html">Ghost Mannequin</a>
+                    <a class="list-group-item a" href="service.html">Jwellary Retouching</a>
+                    <a class="list-group-item a" href="product.html">Product Photo Retouching</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+               
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Work Flow</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Price</a>
+                    </li>
+                    <li class="nav-item dropdown resource">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="portfolio.html"><i class="fa fa-folder-open" aria-hidden="true"></i> Portfolio</a></li>
+                          <li><a class="dropdown-item" href="blog.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Blog</a></li>
+                          
+                        </ul>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="company.html">Company</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+
+
+    <!-- banner -->
+    <section id="ser_banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="ser-ban-con">
+              <h3>WORK</h3>
+            <h4>F L O W</h4>
+            <div class="ban2 col-lg-6 col-sm-12 col-md-12 d-flex mt-2">
+              <a class="btn btn-primary btn-wide transition-3d-hover mb-2 mb-sm-0 mr-3 trail" href="free_traial.html">Free Trial</a>
+                <a class="btn btn-outline-primary btn-wide transition-3d-hover mb-2 mb-sm-0 trail" href="login.html" target="_blank" style="margin-left: 5px;" rel="noopener">Get Started</a>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner -->
+
+
+        <!-- more -->
+        <section id="gallery">
+     
+
+          <div class="container">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="choose-header">
+                <h3 class="text-center" style="font-weight: 600; letter-spacing: 2px; color: black;">Why Choose <span class="Span-header" style=" letter-spacing: 1px;">Retouching Cloud</span></h3>
+                <p class="text-center" align="justify" style="color: #000; font-size: 14px; line-height: 26px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem  <br> distinctio repudiandae quisquam laborum doloribus vel ut ab repellendus sequi.</p>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="partner-card">
+                <div class="gallery-item col-lg-3">
+                    <div class="card" style="width: 12rem;">
+                        <div class="card-img">
+                            <img src="images/company page/partner/signet.webp" class="card-img-top" alt="..." width="50%"> </div>
+                            <div class="card-content" align="justify" style="font-size: 14px; text-align: center;"><p>Lorem ipsum dolor,ipsum ipsumsit amet consectetur adipisicing elit. Quos, beatae. Nemo</p></div>
+                      </div>
+    
+                </div>
+                <div class="gallery-item col-lg-3">
+                    <div class="card" style="width: 12rem;">
+                        <div class="card-img">
+                            <img src="images/company page/partner/signet.webp" class="card-img-top" alt="..." width="50%"> </div>
+                            <div class="card-content" align="justify" style="font-size: 14px; text-align: center;"><p>Lorem ipsum dolor,ipsum ipsumsit amet consectetur adipisicing elit. Quos, beatae. Nemo</p></div>
+                      </div>
+    
+                </div>
+                <div class="gallery-item col-lg-3">
+                    <div class="card" style="width: 12rem;">
+                        <div class="card-img">
+                            <img src="images/company page/partner/signet.webp" class="card-img-top" alt="..." width="50%"></div>
+                            <div class="card-content" align="justify" style="font-size: 14px; text-align: center;"><p>Lorem ipsum dolor,ipsum ipsumsit amet consectetur adipisicing elit. Quos, beatae. Nemo</p></div>
+                      </div>
+    
+                </div>
+                <div class="gallery-item col-lg-3">
+                    <div class="card" style="width: 12rem;">
+                        <div class="card-img">
+                            <img src="images/company page/partner/signet.webp" class="card-img-top" alt="..." width="50%"> </div>
+                            <div class="card-content" align="justify" style="font-size: 14px; text-align: center;"><p>Lorem ipsum dolor,ipsum ipsumsit amet consectetur adipisicing elit. Quos, beatae. Nemo</p></div>
+                      </div>
+    
+                </div>
+                <div class="gallery-item col-lg-3">
+                    <div class="card" style="width: 12rem;">
+                        <div class="card-img">
+                            <img src="images/company page/partner/signet.webp" class="card-img-top" alt="..." width="50%"></div>
+                            <div class="card-content" align="justify" style="font-size: 14px; text-align: center;"><p>Lorem ipsum dolor,ipsum ipsumsit amet consectetur adipisicing elit. Quos, beatae. Nemo</p></div>
+                      </div>
+    
+                </div>
+                <div class="gallery-item col-lg-3">
+                    <div class="card" style="width: 12rem;">
+                        <div class="card-img">
+                            <img src="images/company page/partner/signet.webp" class="card-img-top" alt="..." width="50%"> </div>
+                            <div class="card-content" align="justify" style="font-size: 14px; text-align: center;"><p>Lorem ipsum dolor,ipsum ipsumsit amet consectetur adipisicing elit. Quos, beatae. Nemo</p></div>
+                      </div>
+    
+                </div>
+              </div>
+            </div>
+    
+    
+      </div>
+    
+    </section>
+        <!-- more -->
+
+             <!-- process -->
+     <section id="process">
+      <div class="container">
+        <div class="row">
+          <div class="test">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="choose-header">
+                <h3 class="text-center" style="font-weight: 600;">Proc<span style="color: #377dff;">ess</span></h3>
+                <p class="text-center" align="justify" style="color: #77838f;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem  <br> distinctio repudiandae quisquam laborum doloribus vel ut ab repellendus sequi.</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-start row mt-5">
+    
+              <div class="tab-content col-lg-7 col-sm-12 mt-5" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                  <img src="images/workflow/process.webp" width="100%" height="100%" alt="">
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                  <img src="images/workflow/process2.webp" width="100%" height="100%" alt="">
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                  <img src="images/workflow/process3.webp" width="100%" height="100%" alt="">
+                </div>
+                
+              </div>
+
+              <div class="nav flex-column nav-pills ms-auto col-lg-5 col-sm-12 process" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                  <div class="card" style="margin-top: 5px;">
+                    <div class="card-body d-flex">
+                      <div class="card-title">
+                      <h5 class="card-i mt-3"><i class="fa fa-certificate" aria-hidden="true" style="font-size: 20px;"></i></h5>
+                    </div>
+                    <div class="card-subtitle ms-2">
+                      <h6 class="mb-2 text-muted" style="text-align: left;">Get Certificate</h6>
+                   
+                    <div class="card-text px-1">
+                      <p class="" align="justify" style="color: #77838f;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, repudiandae architecto doloribus repudiandae.</p>
+                    </div>
+                  </div>
+                </div>
+                    </div>
+                </button>
+
+
+
+                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                  <div class="card" style="margin-top: 5px;">
+                    <div class="card-body d-flex">
+                      <div class="card-title">
+                      <h5 class="card-i mt-3"><i class="fa fa-certificate" aria-hidden="true" style="font-size: 20px;"></i></h5>
+                    </div>
+                    <div class="card-subtitle ms-2">
+                      <h6 class="mb-2 text-muted" style="text-align: left;">Get Certificate</h6>
+                   
+                    <div class="card-text px-1">
+                      <p class="" align="justify" style="color: #77838f;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, repudiandae architecto doloribus repudiandae.</p>
+                    </div>
+                  </div>
+                </div>
+                    </div>
+                </button>
+
+
+                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                  <div class="card" style="margin-top: 5px;">
+                    <div class="card-body d-flex">
+                      <div class="card-title">
+                      <h5 class="card-i mt-3"><i class="fa fa-certificate" aria-hidden="true" style="font-size: 20px;"></i></h5>
+                    </div>
+                    <div class="card-subtitle ms-2">
+                      <h6 class="mb-2 text-muted" style="text-align: left;">Get Certificate</h6>
+                   
+                    <div class="card-text px-1">
+                      <p class="" align="justify" style="color: #77838f;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, repudiandae architecto doloribus repudiandae.</p>
+                    </div>
+                  </div>
+                </div>
+                    </div>
+                </button>
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+     </section>
+     <!-- process -->
+
+     <!-- productivity -->
+     <section id="productivity" style="margin: 50px 0;">
+     <div class="container">
+      <div class="row justify-content-lg-between align-items-lg-center no-gutters">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="mb-4">
+        <h2 class="h1 font-weight-semi-bold">Get used to productivity</h2>
+        <p style="color: #77838f; line-height: 1.7; margin-top: 10px;" align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt accusamus officiis aperiam laborum repudiandae quam.</p>
+        </div>
+        <a class="btn btn-primary btn-wide transition-3d-hover" style="border-radius: 10px;" href="login.html" target="_blank" rel="noopener">Create Account</a>
+        </div>
+        <div class="ml-auto col-lg-6 space-top-1 space-top-sm-2">
+        <div class="position-relative z-index-2">
+        <img class="img-fluid shadow-lg" src="images/workflow/productivity.webp" alt="Image Description">
+        </div>
+        </div>
+        </div>
+     </div>
+    </section>
+     <!-- productivity -->
+
+          <!-- types -->
+          <section id="types">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class="choose-header">
+                    <h3 class="text-center" style="font-weight: 600;">Typ<span style="color: #377dff;">es</span></h3>
+                    <p class="text-center" align="justify" style="color: #77838f;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem  <br> distinctio repudiandae quisquam laborum doloribus vel ut ab repellendus sequi.</p>
+                  </div>
+                  </div>
+                  <div class="col-lg-4 col-md-3 col-sm-12 ser">
+                    <div class="card" style="width: 20rem; overflow: hidden;">
+                      <img src="images/service/Untitled-1.jpg" class="card-img-top" width="105%" alt="...">
+                      <div class="card-body text-center">
+                        <h5 class="card-title">Jwellary Retouching</h5>
+                        <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                        <div class="ser-btn">
+                          <a href="#">More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-3 col-sm-12 ser">
+                    <div class="card" style="width: 20rem; overflow: hidden;">
+                      <img src="images/service/Untitled-1.jpg" class="card-img-top" width="105%" alt="...">
+                      <div class="card-body text-center">
+                        <h5 class="card-title">Jwellary Retouching</h5>
+                        <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                        <div class="ser-btn">
+                          <a href="#">More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-3 col-sm-12 ser">
+                    <div class="card" style="width: 20rem; overflow: hidden;">
+                      <img src="images/service/Untitled-1.jpg" class="card-img-top" width="105%" alt="...">
+                      <div class="card-body text-center">
+                        <h5 class="card-title">Jwellary Retouching</h5>
+                        <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                        <div class="ser-btn">
+                          <a href="#">More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </section>
+          <!-- types -->
+    
+      <!-- countdown -->
+      <section id="count" style="margin-bottom: 0;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="wrapper d-flex justify-content-evenly">
+                <div class="counter col_fourth" style="text-align: center;">
+                  <i class="fa fa-code fa-2x"></i>
+                  <h2 class="timer count-title count-number" data-to="300" data-speed="2200"></h2>
+                  <p class="count-text ">Price Starts From</p>
+                </div>
+            
+                <div class="counter col_fourth" style="text-align: center;">
+                  <i class="fa fa-coffee fa-2x"></i>
+                  <h2 class="timer count-title count-number" data-to="1700" data-speed="1800"></h2>
+                  <p class="count-text ">Get Big Discount</p>
+                </div>
+            
+                <div class="counter col_fourth" style="text-align: center;">
+                  <i class="fa fa-lightbulb-o fa-2x"></i>
+                  <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                  <p class="count-text ">We Can Deliver</p>
+                </div>
+            
+                <div class="counter col_fourth end" style="text-align: center;">
+                  <i class="fa fa-bug fa-2x"></i>
+                  <h2 class="timer count-title count-number" data-to="157" data-speed="2500"></h2>
+                  <p class="count-text ">Comprehensive Q/A</p>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- countdown -->
+
+     <!-- back to top -->
+     <a id="button"></a>
+     <!-- back to top -->
+
+
+
+     <!-- online -->
+     <section id="footer" style="margin-top: 0;">
+      <div class="container">
+        <div class="row animate__animated animate__backInUp" data-wow-duration="1500ms">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="footer-logo">
+              <img src="images/logo.png"  alt="" srcset="">
+            </div>
+            <div class="footer-content">
+              <p align="justify">Retouching Cloud is a private limited company in Bangladesh, incorporated (No. C-168133/2021) under the Companies Act of 1994. Also, we are a member of BASIS, having Membership Number A698. So feel relaxed to get professional photo editing services.</p>
+              <h5>PAY USING PAYPAL</h5>
+              <div class="footer-i d-flex">
+                <i class="fa fa-paypal pt-1" aria-hidden="true"></i>
+                <p> -  Paypal</p>
+              </div>
+              <div class="footer-i d-flex">
+                <i class="fa fa-university pt-1" aria-hidden="true"></i>
+                <p> -  Bank Transfer</p>
+              </div>
+              <div class="footer-i d-flex">
+                <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+                <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                <i class="fa fa-money" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="feature-header">
+              <h4>FEATURED SERVICES</h4>
+              <a href="">Jwellary</a>
+              <a href="">E-Commerce</a>
+              <a href="">Mannequin</a>
+              <a href="">Retouching</a>
+              <a href="">Clipping</a>
+              <a href="">Crop And Resize</a>
+              <a href="">Hair Masking</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="contact-header">
+              <h4>CONTACT US</h4>
+            </div>
+            <div class="contact d-flex">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <div class="address">
+                <h6>Address</h6>
+                <p align="justify">House-16, Road-28, Block-D, Section-10, Mirpur-10, Dhaka-1216, Bangladesh</p>
+              </div>
+            </div>
+            <div class="contact d-flex">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <div class="address phone">
+                <h6>Phone Number</h6>
+                <p >+880 186592 1218</p>
+                <p >+880 186592 1218</p>
+              </div>
+            </div>
+            <div class="contact d-flex">
+              <i class="fa fa-email" aria-hidden="true"></i>
+              <div class="address phone"> 
+                <h6>E-Mail</h6>
+                <p style="padding-left: 5px;">retouchingcloud@gmail.com </p>
+              </div>
+            </div>
+            <div class="contact d-flex contact-social justify-content-between">
+              <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+             <a href=""> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+             <a href=""> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+     <!-- online -->
+
+
+
+
+
+     
+     <!-- <script src="js/jquery-1.12.4.min.js"></script> -->
+     <script src="js/slick.min.js"></script>
+     <script src="js/jquery.event.move.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>  
+     <script src="js/jquery.twentytwenty.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <script src="js/style.js"></script>
+
+    <script>
+      (function ($) {
+	$.fn.countTo = function (options) {
+		options = options || {};
+		
+		return $(this).each(function () {
+			// set options for current element
+			var settings = $.extend({}, $.fn.countTo.defaults, {
+				from:            $(this).data('from'),
+				to:              $(this).data('to'),
+				speed:           $(this).data('speed'),
+				refreshInterval: $(this).data('refresh-interval'),
+				decimals:        $(this).data('decimals')
+			}, options);
+			
+			// how many times to update the value, and how much to increment the value on each update
+			var loops = Math.ceil(settings.speed / settings.refreshInterval),
+				increment = (settings.to - settings.from) / loops;
+			
+			// references & variables that will change with each update
+			var self = this,
+				$self = $(this),
+				loopCount = 0,
+				value = settings.from,
+				data = $self.data('countTo') || {};
+			
+			$self.data('countTo', data);
+			
+			// if an existing interval can be found, clear it first
+			if (data.interval) {
+				clearInterval(data.interval);
+			}
+			data.interval = setInterval(updateTimer, settings.refreshInterval);
+			
+			// initialize the element with the starting value
+			render(value);
+			
+			function updateTimer() {
+				value += increment;
+				loopCount++;
+				
+				render(value);
+				
+				if (typeof(settings.onUpdate) == 'function') {
+					settings.onUpdate.call(self, value);
+				}
+				
+				if (loopCount >= loops) {
+					// remove the interval
+					$self.removeData('countTo');
+					clearInterval(data.interval);
+					value = settings.to;
+					
+					if (typeof(settings.onComplete) == 'function') {
+						settings.onComplete.call(self, value);
+					}
+				}
+			}
+			
+			function render(value) {
+				var formattedValue = settings.formatter.call(self, value, settings);
+				$self.html(formattedValue);
+			}
+		});
+	};
+	
+	$.fn.countTo.defaults = {
+		from: 0,               // the number the element should start at
+		to: 0,                 // the number the element should end at
+		speed: 1000,           // how long it should take to count between the target numbers
+		refreshInterval: 100,  // how often the element should be updated
+		decimals: 0,           // the number of decimal places to show
+		formatter: formatter,  // handler for formatting the value before rendering
+		onUpdate: null,        // callback method for every time the element is updated
+		onComplete: null       // callback method for when the element finishes updating
+	};
+	
+	function formatter(value, settings) {
+		return value.toFixed(settings.decimals);
+	}
+}(jQuery));
+
+    jQuery(function ($) {
+  // custom formatting example
+  $('.count-number').data('countToOptions', {
+	formatter: function (value, options) {
+	  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+	}
+  });
+  
+  // start all the timers
+  $('.timer').each(count);  
+  
+  function count(options) {
+	var $this = $(this);
+	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+	$this.countTo(options);
+  }
+});
+
+
+
+
+  //more slider
+  $('.more_slider2').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows:false,
+  dots:true
+});
+
+//  partner slider 
+$('.partner-card').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 1500,
+  arrows:false,
+  centerMode:true,
+  centerPadding:0,
+  dots: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 650,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll:1,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 575,
+      settings: {
+        slidesToShow: 2,
+        dots: false,
+        slidesToScroll: 1
+      }
+    }
+  
+  ]
+  
+});
+// partner//
+  </script>
+
+
+  </body>
+</html>
+
+

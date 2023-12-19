@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="media stylesheet" href="css/media.css">
+
+    <title>Retouching Cloud</title>
+ 
+    <style>
+      .iti__flag-container {
+        top: -9px;
+      }
+        .iti__country-list {
+         width: 264px;
+
+         }
+         .iti input, .iti input[type=text], .iti input[type=tel] {
+            margin-top: -7px !important;
+        }
+        textarea.form-control {
+        min-height: calc(1.5em + (.75rem + 2px));
+        height: 150px!important;
+    }
+
+    .btn-primary:not(label.btn), .btn-primary:not(label.btn):not([href]):not(:disabled):not(.disabled), .btn-primary:not([href]), .btn-primary:not([href]):not([href]):not(:disabled):not(.disabled) {
+    background-color: #143f8f;
+    border-color: var(--corp-button);
+    width: 50%;
+    padding: 20px 0;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.agreement{
+  color: #000;
+}
+.agreement:hover{
+  color: #000;
+}
+
+
+
+/* upload  */
+.drop-zone {
+    max-width: 538px;
+    height: 381px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    color: #cccccc;
+    border: 4px dashed #143f8f;
+    border-radius: 10px;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone__input {
+  display: none;
+}
+
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+}
+
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* new drag  */
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+   <header class="header ">
+    <div class="container d-flex">
+       <div class="language">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Language
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">English</a></li>
+            <li><a class="dropdown-item" href="#">Bengali</a></li>
+            <li><a class="dropdown-item" href="#">France</a></li>
+            <li><a class="dropdown-item" href="#">Portuguish</a></li>
+          </ul>
+       </div>
+       <div class="fac ms-auto d-flex pt-2 px-2">
+       <span><a href="">FAQ </a></span>
+       <span><a href=""> Contacts </a></span>
+       <span><a href=""> <i class="fa fa-phone" aria-hidden="true"></i></a></span>
+       <span><a href=""> <i class="fa fa-user-circle" aria-hidden="true"></i></a></span>
+    </div>
+   </header>
+    <!-- header -->
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light nav-menu" id="menu">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="" srcset="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                      <!-- Navbar dropdown -->
+        <li class="nav-item dropdown dropdown-hover position-static">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button"
+             aria-expanded="false">
+            Services
+          </a>
+          <!-- Dropdown menu -->
+          <div class="dropdown-menu w-40 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                            border-top-right-radius: 0;
+                          ">
+
+            <div class="container">
+              <div class="row my-4">
+                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item a" href="shadow_making.html">Shadow Making</a>
+                    <a class="list-group-item a" href="clipping_path.html">Clipping Path</a>
+                    <a class="list-group-item a" href="hair.html">Hair Masking</a>
+                    <a class="list-group-item a" href="background.html">Background Removal</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item a" href="image_recolor.html">Image Recolor</a>
+                    <a class="list-group-item a" href="headshot.html">Headshot Retouching</a>
+                    <a class="list-group-item a" href="ecommerce.html">E-commerce Image Editing</a>
+                    <a class="list-group-item a" href="crop.html">Crope & Resize</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item a" href="baby_retouch.html">Baby Retouching</a>
+                    <a class="list-group-item a" href="ghost.html">Ghost Mannequin</a>
+                    <a class="list-group-item a" href="service.html">Jwellary Retouching</a>
+                    <a class="list-group-item a" href="product.html">Product Photo Retouching</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+               
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="work.html">Work Flow</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Price</a>
+                    </li>
+                    <li class="nav-item dropdown resource">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#"><i class="fa fa-folder-open" aria-hidden="true"></i> Portfolio</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Blog</a></li>
+                          
+                        </ul>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="company.html">Company</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+
+
+    <!-- content -->
+    <section id="free_trial" style="margin: 80px 0;">
+        <div class="container">
+            <div class="row g-3">
+               <div class="col-lg-6">
+                <form class="row g-3">
+                    <div class="col-md-6 my-3">
+                      <label for="validationDefault01" class="form-label">First name</label>
+                      <input type="text" class="form-control" id="validationDefault01" value="" placeholder="John" required>
+                    </div>
+                    <div class="col-md-6 my-3">
+                      <label for="validationDefault02" class="form-label">Last name</label>
+                      <input type="text" class="form-control" id="validationDefault02" value="" placeholder="Doe" required>
+                    </div>
+                    <div class="col-md-6 my-3">
+                      <label for="validationDefault03" class="form-label">Email</label>
+                      <input type="text" class="form-control" id="validationDefault03" placeholder="xyz@abc.com" required>
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <p>Enter your phone number:</p>
+                        <input id="phone" class="form-control" id="validationDefault03" type="tel" name="phone" />
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <label for="validationDefault04" class="form-label">Service</label>
+                        <select class="form-select" id="validationDefault04" required>
+                          <option selected disabled value="">Choose..</option>
+                          <option>Shadow Making</option>
+                          <option>Clipping Path</option>
+                          <option>Hair Masking</option>
+                          <option>Background Removal</option>
+                          <option>Image Recolor</option>
+                          <option>Headshot Retouching</option>
+                          <option>E-commerce Image Editing</option>
+                          <option>Crope & Resize</option>
+                          <option>Baby Retouching</option>
+                          <option>Ghost Mannequin</option>
+                          <option>Jwellary Retouching</option>
+                          <option>Product Photo Retouching</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6 my-3">
+                        <label for="validationDefault04" class="form-label">Quantity</label>
+                        <select class="form-select" id="validationDefault04" required>
+                          <option selected disabled value="">Choose..</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6 my-3">
+                        <label for="validationDefault04" class="form-label">Prototype Service</label>
+                        <select class="form-select" id="validationDefault04" required>
+                          <option selected disabled value="">Choose...</option>
+                          <option>One Time</option>
+                          <option>Regular Basis</option>
+                        </select>
+                      </div>
+
+                     
+
+
+
+
+                <form id="login" onsubmit="process(event)">
+                   <div class="row">
+                    <div class="col-lg-6">
+                      <div class="name">
+
+                      </div>
+
+                    
+
+
+                </div>
+                
+               </div>
+            </div>
+            <div class="col-md-6">
+                
+                <!-- <div class="form-group inputDnD">
+                  <label class="sr-only" for="inputFile">File Upload</label>
+                  <input type="file" class="form-control-file text-primary font-weight-bold" id="inputFile" accept="image/*" onchange="readUrl(this)" >
+                </div>
+                <h5 class="drag">Upload Picture</h5> -->
+
+                <div class="drop-zone">
+                  <span class="drop-zone__prompt">Drop file here or click to upload</span>
+                  <input type="file" name="myFile" class="drop-zone__input">
+                </div>
+                
+              </div>
+            </div>
+                <div class="col-md-12 my-3">
+                    <div class="form-group">
+                        <label for="validationDefault04" class="form-label">Additional Information</label>
+                        <textarea class="form-control ht-200"></textarea>
+                    </div>
+                    </div>
+                  
+                  
+                <div class="col-12 my-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                      <a href="" class="agreement" target="_blank">Agree to terms and conditions</a>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-12 my-3" style="text-align: center;">
+                  <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+              </form>
+                  </form>
+        </div>
+    </div>
+    </section>
+    <!-- content -->
+
+  
+
+     <!-- online -->
+     <section id="footer">
+      <div class="container">
+        <div class="row animate__animated animate__backInUp" data-wow-duration="1500ms">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="footer-logo">
+              <img src="images/logo.png"  alt="" srcset="">
+            </div>
+            <div class="footer-content">
+              <p align="justify">Retouching Cloud is a private limited company in Bangladesh, incorporated (No. C-168133/2021) under the Companies Act of 1994. Also, we are a member of BASIS, having Membership Number A698. So feel relaxed to get professional photo editing services.</p>
+              <h5>PAY USING PAYPAL</h5>
+              <div class="footer-i d-flex">
+                <i class="fa fa-paypal pt-1" aria-hidden="true"></i>
+                <p> -  Paypal</p>
+              </div>
+              <div class="footer-i d-flex">
+                <i class="fa fa-university pt-1" aria-hidden="true"></i>
+                <p> -  Bank Transfer</p>
+              </div>
+              <div class="footer-i d-flex">
+                <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+                <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                <i class="fa fa-money" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="feature-header">
+              <h4>FEATURED SERVICES</h4>
+              <a href="">Jwellary</a>
+              <a href="">E-Commerce</a>
+              <a href="">Mannequin</a>
+              <a href="">Retouching</a>
+              <a href="">Clipping</a>
+              <a href="">Crop And Resize</a>
+              <a href="">Hair Masking</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="contact-header">
+              <h4>CONTACT US</h4>
+            </div>
+            <div class="contact d-flex">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <div class="address">
+                <h6>Address</h6>
+                <p align="justify">House-16, Road-28, Block-D, Section-10, Mirpur-10, Dhaka-1216, Bangladesh</p>
+              </div>
+            </div>
+            <div class="contact d-flex">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <div class="address phone">
+                <h6>Phone Number</h6>
+                <p >+880 186592 1218</p>
+                <p >+880 186592 1218</p>
+              </div>
+            </div>
+            <div class="contact d-flex">
+              <i class="fa fa-email" aria-hidden="true"></i>
+              <div class="address phone"> 
+                <h6>E-Mail</h6>
+                <p style="padding-left: 5px;">retouchingcloud@gmail.com </p>
+              </div>
+            </div>
+            <div class="contact d-flex contact-social justify-content-between">
+              <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+             <a href=""> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+             <a href=""> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+     <!-- online -->
+
+
+
+
+
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/style.js"></script>
+    <script>
+
+
+
+
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+          utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+
+       
+
+        //drag and drop
+//         function readUrl(input) {
+  
+//   if (input.files && input.files[0]) {
+//     let reader = new FileReader();
+//     reader.onload = (e) => {
+//       let imgData = e.target.result;
+//       let imgName = input.files[0].name;
+//       input.setAttribute("data-title", imgName);
+//       console.log(e.target.result);
+//     }
+//     reader.readAsDataURL(input.files[0]);
+//   }
+
+// }
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const draggable = document.getElementById('draggable');
+//   const droppable = document.getElementById('droppable');
+
+//   draggable.addEventListener('dragstart', function (event) {
+//     event.dataTransfer.setData('text/plain', 'Dragged Element');
+//   });
+
+//   droppable.addEventListener('dragover', function (event) {
+//     event.preventDefault();
+//   });
+
+//   droppable.addEventListener('drop', function (event) {
+//     event.preventDefault();
+//     const data = event.dataTransfer.getData('text/plain');
+//     droppable.innerText = data;
+//   });
+// });
+
+document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+  const dropZoneElement = inputElement.closest(".drop-zone");
+
+  dropZoneElement.addEventListener("click", (e) => {
+    inputElement.click();
+  });
+
+  inputElement.addEventListener("change", (e) => {
+    if (inputElement.files.length) {
+      updateThumbnail(dropZoneElement, inputElement.files[0]);
+    }
+  });
+
+  dropZoneElement.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropZoneElement.classList.add("drop-zone--over");
+  });
+
+  ["dragleave", "dragend"].forEach((type) => {
+    dropZoneElement.addEventListener(type, (e) => {
+      dropZoneElement.classList.remove("drop-zone--over");
+    });
+  });
+
+  dropZoneElement.addEventListener("drop", (e) => {
+    e.preventDefault();
+
+    if (e.dataTransfer.files.length) {
+      inputElement.files = e.dataTransfer.files;
+      updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+    }
+
+    dropZoneElement.classList.remove("drop-zone--over");
+  });
+});
+
+/**
+ * Updates the thumbnail on a drop zone element.
+ *
+ * @param {HTMLElement} dropZoneElement
+ * @param {File} file
+ */
+function updateThumbnail(dropZoneElement, file) {
+  let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+  // First time - remove the prompt
+  if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+    dropZoneElement.querySelector(".drop-zone__prompt").remove();
+  }
+
+  // First time - there is no thumbnail element, so lets create it
+  if (!thumbnailElement) {
+    thumbnailElement = document.createElement("div");
+    thumbnailElement.classList.add("drop-zone__thumb");
+    dropZoneElement.appendChild(thumbnailElement);
+  }
+
+  thumbnailElement.dataset.label = file.name;
+
+  // Show thumbnail for image files
+  if (file.type.startsWith("image/")) {
+    const reader = new FileReader();
+
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+    };
+  } else {
+    thumbnailElement.style.backgroundImage = null;
+  }
+}
+
+
+
+
+
+
+
+      </script>
+
+  </body>
+</html>
+
+
