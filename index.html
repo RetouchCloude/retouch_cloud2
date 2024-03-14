@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="media stylesheet" href="css/media.css">
+
+    <title>Retouching Cloud</title>
+  </head>
+  <style>
+
+
+
+
+.price_card{
+  box-shadow: 0 0 25px rgba(113, 113,113,0.1);
+  background:#fff;
+  display: inline-table;
+  top: 0;
+  border-radius: 20px;
+  width: 20%;
+}
+
+.price_card:not(:last-child){
+  margin-right: 7px;
+}
+
+.header{
+  color: rgb(255, 255, 255);
+}
+
+.alpha .header{
+  text-align: left;
+  color: #000;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.bravo .header{
+  color: #000;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.charlie .header{
+  color: #000;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.price {
+    width: 100%;
+    font-size: 38px;
+    font-weight: 700;
+    display: block;
+    text-align: left;
+    padding: 0px 0 10px;
+    margin-left: 15px;
+}
+.name {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    padding: 0 0 10px;
+    margin-left: 15px;
+}
+.price_desp {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    padding: 0 0 10px;
+    margin-left: 15px;
+}
+.features{
+  list-style: none;
+  text-align: left;
+  color: rgb(138, 138, 138);
+  margin: 0;
+  padding: 0;
+}
+.features li{
+  margin: 0 35px;
+  padding: 3px 15px;
+  width: 200px;
+}
+.features li:not(:last-child){
+  border: 1px solid rgb(242, 242, 242);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.cart{
+  display: flex;
+}
+.cart1{
+  color: rgb(255, 255, 255);
+  border: 0;
+  border-radius: 5px;
+  display: flex;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin: 20px 0 35px 25px;
+  background: transparent;
+  border: 1px solid  #377dff;
+  color: #000;
+  transition: all linear 0.3s;
+  
+}
+.cart1:hover{ 
+  background: var(--corp-blue);
+border: 1px solid ;
+  color: #fff;
+
+}
+.cart2{
+  padding: 10px 18px;
+  color: rgb(255, 255, 255);
+  border: 0;
+  border-radius: 5px;
+  display: flex;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 20px 0 35px 5px;
+  background:  var(--corp-blue);
+}
+ 
+
+.tip{
+  font-family: 'Indie Flower';
+  position: absolute;
+  color: rgb(117, 117, 117);
+  margin: 10px 5px;
+}
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .price_card {
+    width: calc(50% - 14px); /* Adjusted width for smaller screens */
+    text-align: center;
+
+  }
+  #service .card{
+    margin-left: 72px;
+  }
+  .choose-card{
+    margin-left: 72px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .price_card {
+    width: 80%; /* Full width for extra small screens */
+    text-align: center;
+    margin-top: 20px;
+  }
+  #service .card{
+    margin-left: 48px;
+  }
+  .choose-card{
+    margin-left: 32px;
+  }
+}
+
+
+
+
+/* testimonial */
+  </style>
+  <body>
+    <!-- header -->
+   <header>
+    <!-- <div class="container d-flex">
+       <div class="language">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Language
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">English</a></li>
+            <li><a class="dropdown-item" href="#">Bengali</a></li>
+            <li><a class="dropdown-item" href="#">France</a></li>
+            <li><a class="dropdown-item" href="#">Portuguish</a></li>
+          </ul>
+       </div>
+       <div class="fac ms-auto d-flex pt-2 px-2">
+       <span><a href="">FAQ </a></span>
+       <span><a href=""> Contacts </a></span>
+       <span><a href=""> <i class="fa fa-phone" aria-hidden="true"></i></a></span>
+       <span><a href=""> <i class="fa fa-user-circle" aria-hidden="true"></i></a></span>
+    </div> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header d-flex justify-content-between">
+            <!-- <div class="language">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Language
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">Bengali</a></li>
+                <li><a class="dropdown-item" href="#">France</a></li>
+                <li><a class="dropdown-item" href="#">Portuguish</a></li>
+              </ul>
+            </div> -->
+            <div class="header-info-item d-flex">
+              <div class="info-item  border-0 d-flex">
+                  <div class="info-icon me-1">
+                    <i class="fa fa-phone" aria-hidden="true" style="color: #377dff;"></i>
+                  </div>
+                  <div class="info-content">
+                      <h6 class="info-title">
+                          <a href="tel:">+880 1865 921218</a>
+                      </h6>
+                      <div class="info-sub-title" style="margin-top: -3px;">
+                          <a href="mailto:">retouchcloud@gmail.com</a>
+                      </div>
+                  </div>
+              </div>
+              
+          </div>
+            <div class="social-icon d-flex">
+              <div class="header-social-networks style-icons">
+                <div class="inner">
+                    <a class=" social-link hint--bounce hint--bottom-left" aria-label="Twitter" href="" data-hover="Twitter" target="_blank">
+                        <i class="social-icon fa fa-twitter"></i>
+                    </a>
+                    <a class=" social-link hint--bounce hint--bottom-left" aria-label="Twitter" href="" data-hover="Twitter" target="_blank">
+                        <i class="social-icon fa fa-whatsapp"></i>
+                    </a>
+                    <a class=" social-link hint--bounce hint--bottom-left" aria-label="Facebook" href="" data-hover="Facebook" target="_blank">
+                        <i class="social-icon fa fa-facebook"></i>
+                    </a>
+                    
+                    <a class=" social-link hint--bounce hint--bottom-left" aria-label="Linkedin" href="" data-hover="Linkedin" target="_blank">
+                        <i class="social-icon fa fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+          </div>
+          <div class="log">
+            <span><a href=""> <p>Login/Register</p></a></span>
+          </div>
+
+            
+           </div>
+        </div>
+      </div>
+    </div>
+
+   </header>
+    <!-- header -->
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light nav-menu" id="menu">
+        <div class="container">
+            <a class="navbar-brand" href="">
+                <img src="images/logo.png" alt="" srcset="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                      <!-- Navbar dropdown -->
+        <li class="nav-item dropdown dropdown-hover position-static">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button"
+             aria-expanded="false">
+            Services
+          </a>
+          <!-- Dropdown menu -->
+          <div class="dropdown-menu w-40 mt-1" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                            border-top-right-radius: 0;
+                          ">
+
+            <div class="container">
+              <div class="row my-4">
+                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item a" href="shadow_making.html">Shadow Making</a>
+                    <a class="list-group-item a" href="clipping_path.html">Clipping Path</a>
+                    <a class="list-group-item a" href="hair.html">Hair Masking</a>
+                    <a class="list-group-item a" href="background.html">Background Removal</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item a" href="image_recolor.html">Image Recolor</a>
+                    <a class="list-group-item a" href="headshot.html">Headshot Retouching</a>
+                    <a class="list-group-item a" href="ecommerce.html">E-commerce Image Editing</a>
+                    <a class="list-group-item a" href="crop.html">Crope & Resize</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item a" href="baby_retouch.html">Baby Retouching</a>
+                    <a class="list-group-item a" href="ghost.html">Ghost Mannequin</a>
+                    <a class="list-group-item a" href="service.html">Jwellary Retouching</a>
+                    <a class="list-group-item a" href="product.html">Product Photo Retouching</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+               
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="work.html">Work Flow</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Price</a>
+                    </li>
+                    <li class="nav-item dropdown resource">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="portfolio.html"><i class="fa fa-folder-open" aria-hidden="true"></i> Portfolio</a></li>
+                          <li><a class="dropdown-item" href="blog.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Blog</a></li>
+                          
+                        </ul>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="company.html">Company</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+
+
+    <!-- banner -->
+      <section id="banner">
+      <div class="container">
+       <div class="row">
+        <div class="banner  d-flex justify-content-between row">
+          
+        <div class="ban2 col-lg-6 col-sm-12 col-md-12">
+            <h2 class="pt-4" style="margin: 80px 0 0;">Make Your Photo Post- <br> Processing Cost Efficient</h2>
+            <p align="justify">Speed up your business giving yourself a break from photo editing services. Our team is dedicatedly working to give your workflow a speed boost.</p>
+            <a class="btn btn-primary btn-wide transition-3d-hover mb-2 mb-sm-0 mr-3 trail" href="free_traial.html" target="_blank">Free Trial</a>
+        </div>
+
+        <div class="ban1 col-lg-6 col-sm-12 col-md-12">
+          <div class="ban-slider ">
+          <div class="ban-item">
+            <img src="images/banner/CJ-0823-001.webp" alt="" width="100%" class="img-fluid">
+          </div>
+            <div class="ban-item">
+              <img src="images/banner/JD 0823 025.webp" alt="" width="100%" class="img-fluid">
+            </div>
+            <div class="ban-item">
+              <img src="images/banner/JD 0823 029 .webp" alt="" width="100%" class="img-fluid">
+            </div>
+            
+          </div>
+      </div>
+      </div>
+       </div>
+      </div>
+  </section>
+  
+    <!-- banner -->
+
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <!-- <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="choose-header">
+              <h3 class="text-center" style="font-weight: 600; letter-spacing: 2px; color: black;">ABOUT <span class="Span-header" style=" letter-spacing: 1px;">RETOUCHING CLOUD</span></h3>
+              
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="about-con">
+              <span>10</span>
+             <div class="about-p">
+              <p>YEARS OF EXPERIENCE IN IT</p>
+             </div>
+             <div class="about-h6">
+              <h6>Learn more about our success stories</h6>
+             </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-6 col-sm-12">
+            <p class="ser-content ab-p mt-5" style="margin-left: 75px;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="more" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span>
+            </p>
+            <a href="" id="myBtn">See More</a>
+          </div>
+        </div> -->
+
+        <div class="luminous-about-box section-space--pb_100 section-space--mt_50">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 mb-5">
+              <div class="choose-header">
+                <h3 class="text-center" style="font-weight: 600; letter-spacing: 2px; color: black;">ABOUT <span class="Span-header" style=" letter-spacing: 1px;">RETOUCHING CLOUD</span></h3>
+                
+              </div>
+            </div>
+              <div class="col-lg-4 offset-lg-1">
+                  <div class="modern-number-01">
+                      <h2 class="heading  me-5"><span class="mark-text" id="experience_year">10</span>Years’ Experience in IT</h2>
+                      <h6 class="heading mt-30">Learn more about our Success Stories</h6>
+                  </div>
+              </div>
+
+              <div class="col-lg-5 offset-lg-1">
+                  <div class="luminous-about-text">
+                      <div class="text">
+                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus dolorem laborum omnis repellendus rerum a molestias facilis maxime adipisci beatae? Repudiandae ullam dolorum libero quia repellat facilis laudantium dolor id?
+                      </div>
+                      <div class="text">
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias ab alias inventore, natus veritatis enim exercitationem quidem reiciendis voluptas in mollitia suscipit incidunt dolore tempora qui officiis. Doloremque, sunt magnam? </div>
+                      <div class="button-text">
+                          <a href="" class="btn-text">
+                              See More
+                              <span class="button-icon ml-1">
+                                  <i class="fa fa-long-arrow-right"></i>
+                              </span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+
+          </div>
+      </div>
+      </div>
+    </section>
+    <!-- About -->
+
+
+    <!-- gallery -->
+    <section id="gallery">
+     
+
+      <div class="container-fluid">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="choose-header">
+            <h3 class="text-center" style="font-weight: 600; letter-spacing: 2px; color: black;">OUR <span class="Span-header" style=" letter-spacing: 1px;">GALLERY</span></h3>
+            <p class="text-center" align="justify" style="color: #000; font-size: 14px; line-height: 26px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem  <br> distinctio repudiandae quisquam laborum doloribus vel ut ab repellendus sequi.</p>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="gallery-card">
+            <div class="gallery-item col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-img">
+                        <img src="images/gallery/Background_remove.jpg" class="card-img-top" alt="..." width="100%">
+                        
+                       </div>
+                  </div>
+
+            </div>
+            <div class="gallery-item col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-img">
+                        <img src="images/gallery/Headshot_retouching.jpg" class="card-img-top" alt="..." width="100%">
+                        
+                       </div>
+                  </div>
+
+            </div>
+            <div class="gallery-item col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-img">
+                        <img src="images/gallery/Jewelry_Photo_Retouching.jpg" class="card-img-top" alt="..." width="100%">
+                        
+                       </div>
+                  </div>
+
+            </div>
+            <div class="gallery-item col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-img">
+                        <img src="images/gallery/Product_photo retouching.jpg" class="card-img-top" alt="..." width="100%">
+                    
+                       </div>
+                  </div>
+
+            </div>
+            <div class="gallery-item col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-img">
+                        <img src="images/gallery/Baby_retouching.jpg" class="card-img-top" alt="..." width="100%">
+                     
+                       </div>
+                  </div>
+
+            </div>
+            <div class="gallery-item col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-img">
+                        <img src="images/gallery/crope &resize.jpg" class="card-img-top" alt="..." width="100%">
+                        
+                       </div>
+                  </div>
+
+            </div>
+          </div>
+        </div>
+
+
+  </div>
+
+</section>
+
+
+
+
+    <!-- why choose us -->
+    <section id="types" style="padding: 80px 0 48px;">
+     <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="choose-header">
+            <h3 class="text-center" style="font-weight: 600; letter-spacing: 2px; color: black;">WHY <span class="Span-header" style=" letter-spacing: 1px;">CHOOSE US</span></h3>
+            <p class="text-center" align="justify" style="color: #000; font-size: 14px; line-height: 26px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem  <br> distinctio repudiandae quisquam laborum doloribus vel ut ab repellendus sequi.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="choose-card">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            <h4>High Quality & Affordable</h4>
+            <p align="justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit adipisicing elit  adipisicing elitadipisicing elit. Sequi consequuntur consectetur, at eum ipsam.</p>
+        </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="choose-card">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            <h4>High Quality & Affordable</h4>
+            <p align="justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit adipisicing elit  adipisicing elitadipisicing elit. Sequi consequuntur consectetur, at eum ipsam.</p>
+        </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="choose-card">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            <h4>High Quality & Affordable</h4>
+            <p align="justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit adipisicing elit  adipisicing elitadipisicing elit. Sequi consequuntur consectetur, at eum ipsam.</p>
+        </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="choose-card">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            <h4>High Quality & Affordable</h4>
+            <p align="justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit adipisicing elit  adipisicing elitadipisicing elit. Sequi consequuntur consectetur, at eum ipsam.</p>
+        </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="choose-card">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            <h4>High Quality & Affordable</h4>
+            <p align="justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit adipisicing elit  adipisicing elitadipisicing elit. Sequi consequuntur consectetur, at eum ipsam.</p>
+        </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="choose-card">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            <h4>High Quality & Affordable</h4>
+            <p align="justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit adipisicing elit  adipisicing elitadipisicing elit. Sequi consequuntur consectetur, at eum ipsam.</p>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!-- why choose us -->
+
+
+    
+    <!-- service -->
+    <section id="service" style="text-align: center;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="choose-header">
+              <h3 class="text-center" style="font-weight: 600; letter-spacing: 2px; color: black;">OUR <span class="Span-header" style=" letter-spacing: 1px;">SERVICES</span></h3>
+              <p class="text-center" align="justify" style="color: #000; font-size: 14px; line-height: 26px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem  <br> distinctio repudiandae quisquam laborum doloribus vel ut ab repellendus sequi.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12 ser">
+            <div class="card" style="width: 20rem;">
+              <img src="images/service/AN 0923 010.jpg" class="card-img-top" width="105%" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">Jwellary Retouching</h5>
+                <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                <div class="ser-btn">
+                  <a href="#">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-sm-12 ser">
+            <div class="card" style="width: 20rem;">
+              <img src="images/service/Headshot_Retouching_04.jpg" class="card-img-top" width="105%" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">Jwellary Retouching</h5>
+                <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                <div class="ser-btn">
+                  <a href="#">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12 ser">
+            <div class="card" style="width: 20rem;">
+              <img src="images/service/MG_1780-600x457.jpg" width="105%" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">Jwellary Retouching</h5>
+                <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                <div class="ser-btn">
+                  <a href="#">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12 ser">
+            <div class="card" style="width: 20rem;">
+              <img src="images/service/Image_Masking_Gallery_-6-600x457.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">Jwellary Retouching</h5>
+                <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                <div class="ser-btn">
+                  <a href="#">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12 ser">
+            <div class="card" style="width: 20rem;">
+              <img src="images/service/Clipping_Path-280x270.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">Jwellary Retouching</h5>
+                <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                <div class="ser-btn">
+                  <a href="#">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12 ser">
+            <div class="card" style="width: 20rem;">
+              <img src="images/service/Natural_shadow_after_01-768x585.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">Jwellary Retouching</h5>
+                <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                <div class="ser-btn">
+                  <a href="#">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12 ser">
+            <div class="card" style="width: 20rem;">
+              <img src="images/service/Image_Recoloring-1-600x457.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">Jwellary Retouching</h5>
+                <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                <div class="ser-btn">
+                  <a href="#">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12 ser">
+            <div class="card" style="width: 20rem;">
+              <img src="images/service/Ghost_Mannequin_Gallery_-4-525x400.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">Jwellary Retouching</h5>
+                <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                <div class="ser-btn">
+                  <a href="#">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    
+        
+      </div>
+    </section>
+    <!-- services -->
+
+
+    <!-- price -->
+    <section id="pricing">
+      <div class="container">
+        <div class="choose-header">
+          <h3 class="text-center" style="font-weight: 600; letter-spacing: 2px; color: black;">OUR <span class="Span-header" style=" letter-spacing: 1px;">PRICE</span></h3>
+          <p class="text-center" align="justify" style="color: #000; font-size: 14px; line-height: 26px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem  <br> distinctio repudiandae quisquam laborum doloribus vel ut ab repellendus sequi.</p>
+        </div>
+          <div class="price_card alpha">
+            <div class="header">
+              <span class="name" style="text-align: left;">Free</span>
+              <span class="price" style="text-align: left;">$0</span>
+              <span class="price_desp" style="text-align: left;">Free</span>
+            </div>
+            <ul class="features">
+              <li>Complete documentation</li>
+              <li>Working materials in PSD and Sketch format</li>
+            </ul>
+            <div class="cart">
+              <button class="cart1">Order</button>
+            <button class="cart2">See Sample</button>
+            </div>
+          </div>
+          <div class="price_card bravo">
+            <div class="header">
+              <span class="name" style="text-align: left;">Basic</span>
+              <span class="price" style="text-align: left;">$15</span>
+              <span class="name" style="text-align: left;">Basic</span>
+            </div>
+            <ul class="features">
+              <li>Complete documentation</li>
+              <li>Working materials in PSD, Sketch and EPS format</li>
+              <li>6 months access to the library</li>
+            </ul>
+            <div class="cart">
+              <button class="cart1">Order</button>
+            <button class="cart2">See Sample</button>
+            </div>
+          </div>
+          <div class="price_card charlie">
+            <div class="header">
+              <span class="name" style="text-align: left;">Standard</span>
+              <span class="price" style="text-align: left;">$25</span>
+              <span class="name" style="text-align: left;">Standard</span>
+            </div>
+            <ul class="features">
+              <li>Complete documentation</li>
+              <li>Working materials in PSD, Sketch and EPS format</li>
+              <li>1 year access to the library</li>
+              <li>2GB cloud storage</li>
+            </ul>
+            <div class="cart">
+              <button class="cart1">Order</button>
+            <button class="cart2">See Sample</button>
+            </div>
+          </div>
+          <div class="price_card charlie">
+            <div class="header">
+              <span class="name" style="text-align: left;">Premium</span>
+              <span class="price" style="text-align: left;">$25</span>
+              <span class="name" style="text-align: left;">Premium</span>
+            </div>
+            <ul class="features">
+              <li>Complete documentation</li>
+              <li>Working materials in PSD, Sketch and EPS format</li>
+              <li>1 year access to the library</li>
+              <li>2GB cloud storage</li>
+              <li>2GB cloud storage</li>
+            </ul>
+            <div class="cart">
+              <button class="cart1">Order</button>
+            <button class="cart2">See Sample</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- price -->
+
+
+
+
+    <!-- testimonial -->
+    
+    <section class="testimonial">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6 d-none d-lg-block">
+                  <ol class="carousel-indicators tabs">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                          <figure>
+                              <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-01-179x179.png" class="img-fluid" alt="">
+                          </figure>
+                      </li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                          <figure>
+                              <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-02-306x306.png" class="img-fluid" alt="">
+                          </figure>
+                      </li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2">
+                          <figure>
+                              <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-03-179x179.png" class="img-fluid" alt="">
+                          </figure>
+                      </li>
+                  </ol>
+              </div>
+              <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                  <div id="carouselExampleIndicators" data-interval="false" class="carousel slide" data-ride="carousel">
+                      <h3>WHAT OUR CLIENTS SAY</h3>
+                      <h1>TESTIMONIALS</h1>
+                      <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <div class="quote-wrapper">
+                                  <p class="ser-content">I have tried a lot of food delivery services but Plate is something out of this world! Their food is really healthy and it tastes great, which is why I recommend this company to all my friends!</p>
+                                  <h3>peter</h3>
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                              <div class="quote-wrapper">
+                                  <p class="ser-content">I have tried a lot of food delivery services but Plate is something out of this world! Their food is really healthy and it tastes great, which is why I recommend this company to all my friends!</p>
+                                  <h3>peter abc</h3>
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                              <div class="quote-wrapper">
+                                  <p class="ser-content">I have tried a lot of food delivery services but Plate is something out of this world! Their food is really healthy and it tastes great, which is why I recommend this company to all my friends!</p>
+                                  <h3>peter lee</h3>
+                              </div>
+                          </div>
+                      </div>
+                      <ol class="carousel-indicators indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      </ol>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+    <!-- testimonial -->
+
+
+     <!-- back to top -->
+     <a id="button"></a>
+     <!-- back to top -->
+
+
+     <!-- process -->
+     <section id="process">
+      <div class="container">
+        <div class="row">
+          <div class="test">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="choose-header">
+                <h3 class="text-center" style="font-weight: 600;">Proc<span style="color: #377dff;">ess</span></h3>
+                <p class="text-center" align="justify" style="color: #77838f;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem  <br> distinctio repudiandae quisquam laborum doloribus vel ut ab repellendus sequi.</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-start row mt-5">
+    
+              <div class="tab-content col-lg-4 col-sm-12 " id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                  <img src="images/demo/pexels-elias-tigiser-19367230.jpg" width="100%" height="100%" alt="">
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                  <img src="images/gallery/Jewelry_Photo_Retouching.jpg" width="100%" height="100%" alt="">
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                  <img src="images/gallery/Product_photo retouching.jpg" width="100%" height="100%" alt="">
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                  <img src="images/gallery/Shadow making.jpg" width="100%" height="100%" alt="">
+                </div>
+              </div>
+
+              <div class="nav flex-column nav-pills ms-auto col-lg-8 col-sm-12 process" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                  <div class="card" style="margin-top: 5px;">
+                    <div class="card-body d-flex">
+                      <div class="card-title">
+                      <h5 class="card-i mt-3"><i class="fa fa-certificate" aria-hidden="true" style="font-size: 20px;"></i></h5>
+                    </div>
+                    <div class="card-subtitle ms-2">
+                      <h6 class="mb-2 text-muted" style="text-align: left;">Get Certificate</h6>
+                   
+                    <div class="card-text px-1">
+                      <p class="ser-content" align="justify" style="color: #77838f;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, repudiandae architecto doloribus repudiandae.</p>
+                    </div>
+                  </div>
+                </div>
+                    </div>
+                </button>
+
+
+
+                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                  <div class="card" style="margin-top: 5px;">
+                    <div class="card-body d-flex">
+                      <div class="card-title">
+                      <h5 class="card-i mt-3"><i class="fa fa-certificate" aria-hidden="true" style="font-size: 20px;"></i></h5>
+                    </div>
+                    <div class="card-subtitle ms-2">
+                      <h6 class="mb-2 text-muted" style="text-align: left;">Get Certificate</h6>
+                   
+                    <div class="card-text px-1">
+                      <p class="ser-content" align="justify" style="color: #77838f;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, repudiandae architecto doloribus repudiandae.</p>
+                    </div>
+                  </div>
+                </div>
+                    </div>
+                </button>
+
+
+                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                  <div class="card" style="margin-top: 5px;">
+                    <div class="card-body d-flex">
+                      <div class="card-title">
+                      <h5 class="card-i mt-3"><i class="fa fa-certificate" aria-hidden="true" style="font-size: 20px;"></i></h5>
+                    </div>
+                    <div class="card-subtitle ms-2">
+                      <h6 class="mb-2 text-muted" style="text-align: left;">Get Certificate</h6>
+                   
+                    <div class="card-text px-1">
+                      <p class="ser-content" align="justify" style="color: #77838f;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, repudiandae architecto doloribus repudiandae.</p>
+                    </div>
+                  </div>
+                </div>
+                    </div>
+                </button>
+
+
+                <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                  <div class="card" style="margin-top: 5px;">
+                    <div class="card-body d-flex">
+                      <div class="card-title">
+                      <h5 class="card-i mt-3"><i class="fa fa-certificate" aria-hidden="true" style="font-size: 20px;"></i></h5>
+                    </div>
+                    <div class="card-subtitle ms-2">
+                      <h6 class="mb-2 text-muted" style="text-align: left;">Get Certificate</h6>
+                   
+                    <div class="card-text px-1">
+                      <p class="ser-content" align="justify" style="color: #77838f;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, repudiandae architecto doloribus repudiandae.</p>
+                    </div>
+                  </div>
+                </div>
+                    </div>
+                </button>
+              </div>
+            </div>
+        </div>
+      </div>
+     </section>
+     <!-- process -->
+
+
+     <!-- online -->
+     <section id="footer">
+      <div class="container">
+        <div class="row animate__animated animate__backInUp" data-wow-duration="1500ms">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="footer-logo">
+              <img src="images/logo.png"  alt="" srcset="">
+            </div>
+            <div class="footer-content">
+              <p align="justify">Retouching Cloud is a private limited company in Bangladesh, incorporated (No. C-168133/2021) under the Companies Act of 1994. Also, we are a member of BASIS, having Membership Number A698. So feel relaxed to get professional photo editing services.</p>
+              <h5>PAY USING PAYPAL</h5>
+              <div class="footer-i d-flex">
+                <i class="fa fa-paypal pt-1" aria-hidden="true"></i>
+                <p> -  Paypal</p>
+              </div>
+              <div class="footer-i d-flex">
+                <i class="fa fa-university pt-1" aria-hidden="true"></i>
+                <p> -  Bank Transfer</p>
+              </div>
+              <div class="footer-i d-flex">
+                <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+                <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                <i class="fa fa-money" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="feature-header">
+              <h4>FEATURED SERVICES</h4>
+              <a href="">Jwellary</a>
+              <a href="">E-Commerce</a>
+              <a href="">Mannequin</a>
+              <a href="">Retouching</a>
+              <a href="">Clipping</a>
+              <a href="">Crop And Resize</a>
+              <a href="">Hair Masking</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="contact-header">
+              <h4>CONTACT US</h4>
+            </div>
+            <div class="contact d-flex">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <div class="address">
+                <h6>Address</h6>
+                <p align="justify">House-16, Road-28, Block-D, Section-10, Mirpur-10, Dhaka-1216, Bangladesh</p>
+              </div>
+            </div>
+            <div class="contact d-flex">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <div class="address phone">
+                <h6>Phone Number</h6>
+                <p >+880 186592 1218</p>
+                <p >+880 186592 1218</p>
+              </div>
+            </div>
+            <div class="contact d-flex">
+              <i class="fa fa-email" aria-hidden="true"></i>
+              <div class="address phone"> 
+                <h6>E-Mail</h6>
+                <p style="padding-left: 5px;">retouchingcloud@gmail.com </p>
+              </div>
+            </div>
+            <div class="contact d-flex contact-social justify-content-between">
+              <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+             <a href=""> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+             <a href=""> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+     <!-- online -->
+
+
+
+
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/style.js"></script>
+
+    <script>
+     $(document).ready(function(){
+    // Handle click on indicators
+    $(".testimonial .indicators li").click(function(){
+        var index = $(this).index();
+        showTestimonial(index);
+    });
+    
+    // Handle click on tabs
+    $(".testimonial .tabs li").click(function(){
+        var index = $(this).index();
+        showTestimonial(index);
+    });
+    
+    // Show testimonial based on index
+    function showTestimonial(index) {
+        $(".testimonial .tabs li").removeClass('active').eq(index).addClass('active');
+        $(".testimonial .carousel-item").removeClass('active').eq(index).addClass('active');
+        $(".testimonial .indicators li").removeClass('active').eq(index).addClass('active');
+    }
+    
+    // Update pagination numbers
+    $(".testimonial .carousel-inner .carousel-item").each(function(i) {
+        $(".testimonial .indicators li").eq(i).text("0" + (i + 1));
+    });
+});
+
+
+
+    </script>
+  </body>
+</html>

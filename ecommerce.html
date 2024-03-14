@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/twentytwenty-no-compass.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+
+
+    <link rel="media stylesheet" href="css/media.css">
+
+    <title>Retouching Cloud</title>
+    <style>
+      /* Custom styles for pagination dots */
+    .custom-pagination-dots {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .custom-pagination-dots button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background-color: transparent;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .custom-pagination-dots button.slick-active {
+      background-color: #fff;
+    }
+
+    /* galley */
+    .gallery {
+	display: flex;
+	padding: 2px;
+	transition: .3s;
+}
+
+.gallery:hover .gallery__image {
+	filter: grayscale(1);
+}
+
+.gallery__column {
+	display: flex;
+	flex-direction: column;
+	width: 24%;
+}
+
+.gallery__link {
+	margin: 2px;
+	overflow: hidden;
+}
+
+.gallery__link:hover .gallery__image {
+	filter: grayscale(0);
+}
+
+.gallery__link:hover .gallery__caption {
+	opacity: 1;
+}
+
+.gallery__thumb {
+	position: relative;
+  overflow: hidden;
+  border-radius: 3%;
+}
+
+.gallery__image {
+	display: block;
+	width: 100%;
+	transition: .3s;
+  border-radius: 3%;
+}
+
+.gallery__link:hover .gallery__image {
+	transform: scale(1.1);
+}
+
+.gallery__caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 25px 15px 15px;
+	width: 100%;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	color: white;
+	opacity: 0;
+	background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255 ,255 , 0) 100%);
+	transition: .3s;
+}
+figure {
+    margin: 0 0 0rem;
+}
+
+    /* galley */
+    
+    </style>
+
+  </head>
+
+  <body>
+    <!-- header -->
+   <header class="header ">
+    <div class="container d-flex">
+       <div class="language">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Language
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">English</a></li>
+            <li><a class="dropdown-item" href="#">Bengali</a></li>
+            <li><a class="dropdown-item" href="#">France</a></li>
+            <li><a class="dropdown-item" href="#">Portuguish</a></li>
+          </ul>
+       </div>
+       <div class="fac ms-auto d-flex pt-2 px-2">
+       <span><a href="">FAQ </a></span>
+       <span><a href=""> Contacts </a></span>
+       <span><a href=""> <i class="fa fa-phone" aria-hidden="true"></i></a></span>
+       <span><a href=""> <i class="fa fa-user-circle" aria-hidden="true"></i></a></span>
+    </div>
+   </header>
+    <!-- header -->
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light nav-menu" id="menu">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="" srcset="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                      <!-- Navbar dropdown -->
+        <li class="nav-item dropdown dropdown-hover position-static">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button"
+             aria-expanded="false">
+            Services
+          </a>
+          <!-- Dropdown menu -->
+          <div class="dropdown-menu w-40 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                            border-top-right-radius: 0;
+                          ">
+
+            <div class="container">
+              <div class="row my-4">
+                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item a" href="shadow_making.html">Shadow Making</a>
+                    <a class="list-group-item a" href="clipping_path.html">Clipping Path</a>
+                    <a class="list-group-item a" href="hair.html">Hair Masking</a>
+                    <a class="list-group-item a" href="background.html">Background Removal</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item a" href="image_recolor.html">Image Recolor</a>
+                    <a class="list-group-item a" href="headshot.html">Headshot Retouching</a>
+                    <a class="list-group-item a" href="">E-commerce Image Editing</a>
+                    <a class="list-group-item a" href="crop.html">Crope & Resize</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item a" href="baby_retouch.html">Baby Retouching</a>
+                    <a class="list-group-item a" href="ghost.html">Ghost Mannequin</a>
+                    <a class="list-group-item a" href="service.html">Jwellary Retouching</a>
+                    <a class="list-group-item a" href="product.html">Product Photo Retouching</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+               
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="work.html">Work Flow</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Price</a>
+                    </li>
+                    <li class="nav-item dropdown resource">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#"><i class="fa fa-folder-open" aria-hidden="true"></i> Portfolio</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Blog</a></li>
+                          
+                        </ul>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="company.html">Company</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+
+
+    <!-- banner -->
+    <section id="ser_banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="ser-ban-con">
+              <h3>E-COMMERCE</h3>
+            <h4>IMAGE EDITING</h4>
+            <div class="ban2 col-lg-6 col-sm-12 col-md-12 d-flex mt-2">
+              <a class="btn btn-primary btn-wide transition-3d-hover mb-2 mb-sm-0 mr-3 trail" href="free_traial.html">Free Trial</a>
+                <a class="btn btn-outline-primary btn-wide transition-3d-hover mb-2 mb-sm-0 trail" href="login.html" target="_blank" style="margin-left: 5px;" rel="noopener">Get Started</a>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner -->
+
+
+        <!-- more -->
+        <section id="more" style="margin: 50px 0;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="choose-header">
+                  <h3 class="text-center" style="font-weight: 600;">Our Popular<span style="color: #377dff;"> Services</span></h3>
+                  <p class="text-center" align="justify" style="color: #77838f;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem  <br> distinctio repudiandae quisquam laborum doloribus vel ut ab repellendus sequi.</p>
+                </div>
+                </div>
+                <div class="more_slider2 mt-4">
+                  <div class="popular-item col-lg-3">
+                    <div class="card" style="width: 20rem; overflow: hidden;">
+                      <img src="images/service/Untitled-1.jpg" class="card-img-top" width="105%" alt="...">
+                      <div class="card-body text-center">
+                        <h5 class="card-title">Jwellary Retouching</h5>
+                      </div>
+                    </div>
+                      </div>
+                  <div class="popular-item col-lg-3">
+                    <div class="card" style="width: 20rem; overflow: hidden;">
+                      <img src="images/service/Untitled-1.jpg" class="card-img-top" width="105%" alt="...">
+                      <div class="card-body text-center">
+                        <h5 class="card-title">Jwellary Retouching</h5>
+                      </div>
+                    </div>
+                      </div>
+                  <div class="popular-item col-lg-3">
+                    <div class="card" style="width: 20rem; overflow: hidden;">
+                      <img src="images/service/Untitled-1.jpg" class="card-img-top" width="105%" alt="...">
+                      <div class="card-body text-center">
+                        <h5 class="card-title">Jwellary Retouching</h5>
+                      </div>
+                    </div>
+                      </div>
+                  <div class="popular-item col-lg-3">
+                    <div class="card" style="width: 20rem; overflow: hidden;">
+                      <img src="images/service/Untitled-1.jpg" class="card-img-top" width="105%" alt="...">
+                      <div class="card-body text-center">
+                        <h5 class="card-title">Jwellary Retouching</h5>
+                      </div>
+                    </div>
+                      </div>
+                  <div class="popular-item col-lg-3">
+                    <div class="card" style="width: 20rem; overflow: hidden;">
+                      <img src="images/service/Untitled-1.jpg" class="card-img-top" width="105%" alt="...">
+                      <div class="card-body text-center">
+                        <h5 class="card-title">Jwellary Retouching</h5>
+                      </div>
+                    </div>
+                      </div>
+                  <div class="popular-item col-lg-3">
+                    <div class="card" style="width: 20rem; overflow: hidden;">
+                      <img src="images/service/Untitled-1.jpg" class="card-img-top" width="105%" alt="...">
+                      <div class="card-body text-center">
+                        <h5 class="card-title">Jwellary Retouching</h5>
+                      </div>
+                    </div>
+                      </div>
+                </div>
+
+                
+              </div>
+            </div>
+        </section>
+        <!-- more -->
+
+
+
+
+        <!-- service -->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="choose-header">
+                <h3 class="text-center" style="font-weight: 600;">Compa<span style="color: #377dff;">rison</span></h3>
+                <p class="text-center" align="justify" style="color: #77838f;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem  <br> distinctio repudiandae quisquam laborum doloribus vel ut ab repellendus sequi.</p>
+              </div>
+              </div>
+            <!-- first item  -->
+            <div class="col-lg-6 col-md-6 col-sm-12 my-5">
+              
+              <!-- <div id="comparison">
+                <figure>
+                  <div id="divisor"></div>
+                </figure>
+                <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+              </div> -->
+              <div class="col-lg-6 col-md-6 col-sm-12 my-5">
+                <div class="compare">
+                  <div class="before">
+                    <div class="after"></div>
+                  </div>
+                  <input type="range" min="0" max="640" step="10" id="compare-ip" />
+                </div>
+              </div>
+    
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+              <div class="ser-pricing mt-5">Pricing Start at $0.75</div>
+              <div class="ser-header">Photo Retouching Service</div>
+              <div class="ser-content" align="justify">If you are aiming for the sky, you have to ride an aircraft, and photo retouching service is the aircraft of digital marketing. So if you want to fly high, you must go for professional photo retouching to make your images an aircraft that can fly high. Using photo retouching, you can improve skin tone, remove blemishes and spots, fix framing and lighting issues.</div>
+              <div class="experience">
+                      <a href="" class="try-us">Try Us Free</a>
+                     </div>
+            </div>
+            <!-- first item  -->
+
+            <!-- second item  -->
+            <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+              <div class="ser-pricing mt-5">Pricing Start at $0.75</div>
+              <div class="ser-header">Photo Retouching Service</div>
+              <div class="ser-content" align="justify">If you are aiming for the sky, you have to ride an aircraft, and photo retouching service is the aircraft of digital marketing. So if you want to fly high, you must go for professional photo retouching to make your images an aircraft that can fly high. Using photo retouching, you can improve skin tone, remove blemishes and spots, fix framing and lighting issues.</div>
+              <div class="experience">
+                      <a href="" class="try-us">Try Us Free</a>
+                     </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 my-5">
+              
+              <!-- <div id="comparison">
+                <figure>
+                  <div id="divisor"></div>
+                </figure>
+                <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+              </div> -->
+              <div class="col-lg-6 col-md-6 col-sm-12 my-5">
+                <div class="compare2">
+                  <div class="before">
+                    <div class="after"></div>
+                  </div>
+                  <input type="range" min="0" max="640" step="10" id="compare-ip" />
+                </div>
+              </div>
+    
+            </div>
+            
+        
+        <!-- second item  -->
+        
+        <!-- third item  -->
+        <div class="col-lg-6 col-md-6 col-sm-12 my-5">
+              
+          <!-- <div id="comparison">
+            <figure>
+              <div id="divisor"></div>
+            </figure>
+            <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+          </div> -->
+          <div class="col-lg-6 col-md-6 col-sm-12 my-5">
+            <div class="compare1">
+              <div class="before">
+                <div class="after"></div>
+              </div>
+              <input type="range" min="0" max="640" step="10" id="compare-ip" />
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+          <div class="ser-pricing mt-5">Pricing Start at $0.75</div>
+          <div class="ser-header">Photo Retouching Service</div>
+          <div class="ser-content" align="justify">If you are aiming for the sky, you have to ride an aircraft, and photo retouching service is the aircraft of digital marketing. So if you want to fly high, you must go for professional photo retouching to make your images an aircraft that can fly high. Using photo retouching, you can improve skin tone, remove blemishes and spots, fix framing and lighting issues.</div>
+          <div class="experience">
+                  <a href="" class="try-us">Try Us Free</a>
+                 </div>
+        </div>
+
+        <!-- third item  -->
+
+
+          <!-- fourth item  -->
+          <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+            <div class="ser-pricing mt-5">Pricing Start at $0.75</div>
+            <div class="ser-header">Photo Retouching Service</div>
+            <div class="ser-content" align="justify">If you are aiming for the sky, you have to ride an aircraft, and photo retouching service is the aircraft of digital marketing. So if you want to fly high, you must go for professional photo retouching to make your images an aircraft that can fly high. Using photo retouching, you can improve skin tone, remove blemishes and spots, fix framing and lighting issues.</div>
+            <div class="experience">
+                    <a href="" class="try-us">Try Us Free</a>
+                   </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 my-5">
+              
+            <!-- <div id="comparison">
+              <figure>
+                <div id="divisor"></div>
+              </figure>
+              <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+            </div> -->
+            <div class="col-lg-6 col-md-6 col-sm-12 my-5">
+              <div class="compare3 ">
+                <div class="before">
+                  <div class="after"></div>
+                </div>
+                <input type="range" min="0" max="640" step="10" id="compare-ip" />
+              </div>
+            </div>
+  
+          </div>
+         
+          <!-- fourth item  -->
+    
+    
+    
+    
+            
+            </div>
+          </div>
+        
+        <!-- service -->
+
+         <!-- gallery -->
+        <!-- <section id="gallery">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="choose-header">
+                  <h3 class="text-center" style="font-weight: 600;">Gal<span style="color: #377dff;">lery</span></h3>
+                  <p class="text-center" align="justify" style="color: #77838f;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem  <br> distinctio repudiandae quisquam laborum doloribus vel ut ab repellendus sequi.</p>
+                </div>
+                </div>
+
+
+              <div class="col-lg-4 col-md-4 gal-img">
+                <figure class="img-container">
+                  <img src="https://source.unsplash.com/8b1cWDyvT7Y" />
+                  <figcaption class="img-content2">
+                    <h2 class="title">Smart Watch</h2>
+                    <h3 class="category">Showcase</h3>
+                  </figcaption>
+                  <span class="img-content-hover2">
+                    <h2 class="title">Smart Watch</h2>
+                    <h3 class="category">Showcase</h3>
+                  </span>
+                </figure>
+              </div>
+              <div class="col-lg-4 col-md-4 gal-img">
+                <figure class="img-container">
+                  <img src="https://source.unsplash.com/5VXH4RG88gc" />
+                  <figcaption class="img-content2">
+                    <h2 class="title">Camera Film</h2>
+                    <h3 class="category">Showcase</h3>
+                  </figcaption>
+                  <span class="img-content-hover2">
+                    <h2 class="title">Camera Film</h2>
+                    <h3 class="category">Showcase</h3>
+                  </span>
+                </figure>
+              </div>
+              <div class="col-lg-4 col-md-4 gal-img">
+                <figure class="img-container">
+                  <img src="https://source.unsplash.com/XtUd5SiX464">
+                  <figcaption class="img-content2">
+                    <h2 class="title">Coffee</h2>
+                    <h3 class="category">Showcase</h3>
+                  </figcaption>
+                  <span class="img-content-hover2">
+                    <h2 class="title">Coffee</h2>
+                    <h3 class="category">Showcase</h3>
+                  </span>
+                </figure>
+              </div>
+              <div class="col-lg-4 col-md-4 gal-img">
+                <figure class="img-container">
+                  <img src="https://source.unsplash.com/JYGnB9gTCls" />
+                  <figcaption class="img-content2">
+                    <h2 class="title">Phone</h2>
+                    <h3 class="category">Showcase</h3>
+                  </figcaption>
+                  <span class="img-content-hover2">
+                    <h2 class="title">Phone</h2>
+                    <h3 class="category">Showcase</h3>
+                  </span>
+                </figure>
+              </div>
+              <div class="col-lg-8 col-md-4 gal-img gal-img2">
+                <figure class="img-container">
+                  <img src="https://source.unsplash.com/-RBuQ2PK_L8" />
+                  <figcaption class="img-content2">
+                    <h2 class="title">Keyboard</h2>
+                    <h3 class="category">Showcase</h3>
+                  </figcaption>
+                  <span class="img-content-hover2">
+                    <h2 class="title">Keyboard</h2>
+                    <h3 class="category">Showcase</h3>
+                  </span>
+                </figure>
+              </div>
+              <div class="col-lg-12 gal-img gal-img3">
+                <figure class="img-container">
+                  <img src="https://source.unsplash.com/P44RIGl9V54" />
+                  <figcaption class="img-content2">
+                    <h2 class="title">Wrist Watch</h2>
+                    <h3 class="category">Showcase</h3>
+                  </figcaption>
+                  <span class="img-content-hover2">
+                    <h2 class="title">Wrist Watch</h2>
+                    <h3 class="category">Showcase</h3>
+                  </span>
+                </figure>
+              </div>
+
+           
+
+
+              </div>
+             
+          
+    
+            </div>
+          </div>
+        </section> -->
+        <!-- gallery -->
+        <!-- new gallery -->
+        <section id="new_gallery">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="choose-header">
+                  <h3 class="text-center" style="font-weight: 600;">Gal<span style="color: #377dff;">lery</span></h3>
+                  <p class="text-center" align="justify" style="color: #77838f;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem  <br> distinctio repudiandae quisquam laborum doloribus vel ut ab repellendus sequi.</p>
+                </div>
+              <div class="gallery">
+                <div class="gallery__column">
+                  <a href="https://unsplash.com/@jeka_fe" target="_blank" class="gallery__link">
+                    <figure class="gallery__thumb">
+                      <img src="https://source.unsplash.com/_cvwXhGqG-o/300x300" alt="Portrait by Retouching Cloud" class="gallery__image">
+                      <figcaption class="gallery__caption">Portrait by Retouching Cloud</figcaption>
+                    </figure>
+                  </a>
+              
+                  <a href="https://unsplash.com/@oladimeg" target="_blank" class="gallery__link">
+                    <figure class="gallery__thumb">
+                      <img src="https://source.unsplash.com/AHBvAIVqk64/300x500" alt="Portrait by Oladimeji Odunsi" class="gallery__image">
+                      <figcaption class="gallery__caption">Portrait by Retouching Cloud</figcaption>
+                    </figure>
+                  </a>
+              
+                  <a href="https://unsplash.com/@a2eorigins" target="_blank" class="gallery__link">
+                    <figure class="gallery__thumb">
+                      <img src="https://source.unsplash.com/VLPLo-GtrIE/300x300" alt="Portrait by Alex Perez" class="gallery__image">
+                      <figcaption class="gallery__caption">Portrait by Retouching Cloud</figcaption>
+                    </figure>
+                  </a>
+                </div>
+                
+                <div class="gallery__column">
+                  <a href="https://unsplash.com/@hikiapp" target="_blank" class="gallery__link">
+                    <figure class="gallery__thumb">
+                      <img src="https://source.unsplash.com/A9rQeI2AdR4/300x300" alt="Portrait by Retouching Cloud" class="gallery__image">
+                      <figcaption class="gallery__caption">Portrait by Retouching Cloud</figcaption>
+                    </figure>
+                  </a>
+                  
+                  <a href="https://unsplash.com/@von_co" target="_blank" class="gallery__link">
+                    <figure class="gallery__thumb">
+                      <img src="https://source.unsplash.com/dnL6ZIpht2s/300x300" alt="Portrait by Retouching Cloud" class="gallery__image">
+                      <figcaption class="gallery__caption">Portrait by Retouching Cloud</figcaption>
+                    </figure>
+                  </a>
+              
+                  <a href="https://unsplash.com/@j_erhunse" target="_blank" class="gallery__link">
+                    <figure class="gallery__thumb">
+                      <img src="https://source.unsplash.com/vp9mRauo68c/300x500" alt="Portrait by Retouching Cloud" class="gallery__image">
+                      <figcaption class="gallery__caption">Portrait by Retouching Cloud</figcaption>
+                    </figure>
+                  </a>
+                </div>
+                
+                <div class="gallery__column">
+                  <a href="https://unsplash.com/@marilezhava" target="_blank" class="gallery__link">
+                    <figure class="gallery__thumb">
+                      <img src="https://source.unsplash.com/Xm9-vA_bhm0/300x500" alt="Portrait by Retouching Cloud" class="gallery__image">
+                      <figcaption class="gallery__caption">Portrait by Retouching Cloud</figcaption>
+                    </figure>
+                  </a>
+                  
+                  <a href="https://unsplash.com/@ethanhaddox" target="_blank" class="gallery__link">
+                    <figure class="gallery__thumb">
+                      <img src="https://source.unsplash.com/NTjSR3zYpsY/300x300" alt="Portrait by Retouching Cloud" class="gallery__image">
+                      <figcaption class="gallery__caption">Portrait by Retouching Cloud</figcaption>
+                    </figure>
+                  </a>
+              
+                  <a href="https://unsplash.com/@mr_geshani" target="_blank" class="gallery__link">
+                    <figure class="gallery__thumb">
+                      <img src="https://source.unsplash.com/2JH8d3ChNec/300x300" alt="Portrait by Retouching Cloud" class="gallery__image">
+                      <figcaption class="gallery__caption">Portrait by Retouching Cloud</figcaption>
+                    </figure>
+                  </a>
+                </div>
+                
+                <div class="gallery__column">
+                  <a href="https://unsplash.com/@nixcreative" target="_blank" class="gallery__link">
+                    <figure class="gallery__thumb">
+                      <img src="https://source.unsplash.com/sh3LSNbyj7k/300x300" alt="Portrait by Retouching Cloud" class="gallery__image">
+                      <figcaption class="gallery__caption">Portrait by Retouching Cloud</figcaption>
+                    </figure>
+                  </a>
+              
+                  <a href="https://unsplash.com/@majestical_jasmin" target="_blank" class="gallery__link">
+                    <figure class="gallery__thumb">
+                      <img src="https://source.unsplash.com/OQd9zONSx7s/300x300" alt="Portrait by Retouching Cloud" class="gallery__image">
+                      <figcaption class="gallery__caption">Portrait by Retouching Cloud</figcaption>
+                    </figure>
+                  </a>
+                  
+                  <a href="https://unsplash.com/@dimadallacqua" target="_blank" class="gallery__link">
+                    <figure class="gallery__thumb">
+                      <img src="https://source.unsplash.com/XZkEhowjx8k/300x500" alt="Portrait by Retouching Cloud" class="gallery__image">
+                      <figcaption class="gallery__caption">Portrait by Retouching Cloud</figcaption>
+                    </figure>
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+        <!-- new gallery -->
+        
+      <!-- countdown -->
+      <section id="count">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="wrapper d-flex justify-content-evenly">
+                <div class="counter col_fourth" style="text-align: center;">
+                  <i class="fa fa-code fa-2x"></i>
+                  <h2 class="timer count-title count-number" data-to="300" data-speed="2200"></h2>
+                  <p class="count-text ">Price Starts From</p>
+                </div>
+            
+                <div class="counter col_fourth" style="text-align: center;">
+                  <i class="fa fa-coffee fa-2x"></i>
+                  <h2 class="timer count-title count-number" data-to="1700" data-speed="1800"></h2>
+                  <p class="count-text ">Get Big Discount</p>
+                </div>
+            
+                <div class="counter col_fourth" style="text-align: center;">
+                  <i class="fa fa-lightbulb-o fa-2x"></i>
+                  <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                  <p class="count-text ">We Can Deliver</p>
+                </div>
+            
+                <div class="counter col_fourth end" style="text-align: center;">
+                  <i class="fa fa-bug fa-2x"></i>
+                  <h2 class="timer count-title count-number" data-to="157" data-speed="2500"></h2>
+                  <p class="count-text ">Comprehensive Q/A</p>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- countdown -->
+
+          <!-- types -->
+            <section id="types">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="choose-header">
+                      <h3 class="text-center" style="font-weight: 600;">Typ<span style="color: #377dff;">es</span></h3>
+                      <p class="text-center" align="justify" style="color: #77838f;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem  <br> distinctio repudiandae quisquam laborum doloribus vel ut ab repellendus sequi.</p>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-sm-12 ser">
+                      <div class="card" style="width: 20rem; overflow: hidden;">
+                        <img src="images/service/Untitled-1.jpg" class="card-img-top" width="105%" alt="...">
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Jwellary Retouching</h5>
+                          <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                          <div class="ser-btn">
+                            <a href="#">More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-sm-12 ser">
+                      <div class="card" style="width: 20rem; overflow: hidden;">
+                        <img src="images/service/Untitled-1.jpg" class="card-img-top" width="105%" alt="...">
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Jwellary Retouching</h5>
+                          <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                          <div class="ser-btn">
+                            <a href="#">More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-sm-12 ser">
+                      <div class="card" style="width: 20rem; overflow: hidden;">
+                        <img src="images/service/Untitled-1.jpg" class="card-img-top" width="105%" alt="...">
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Jwellary Retouching</h5>
+                          <p class="card-text mt-2" style="font-size: 14px;">Photo Retouching/Restoring,Product Retouching,Color Replacement,...</p>
+                          <div class="ser-btn">
+                            <a href="#">More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <!-- types -->
+
+
+     <!-- back to top -->
+     <a id="button"></a>
+     <!-- back to top -->
+
+
+
+     <!-- online -->
+     <section id="footer">
+      <div class="container">
+        <div class="row animate__animated animate__backInUp" data-wow-duration="1500ms">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="footer-logo">
+              <img src="images/logo.png"  alt="" srcset="">
+            </div>
+            <div class="footer-content">
+              <p align="justify">Retouching Cloud is a private limited company in Bangladesh, incorporated (No. C-168133/2021) under the Companies Act of 1994. Also, we are a member of BASIS, having Membership Number A698. So feel relaxed to get professional photo editing services.</p>
+              <h5>PAY USING PAYPAL</h5>
+              <div class="footer-i d-flex">
+                <i class="fa fa-paypal pt-1" aria-hidden="true"></i>
+                <p> -  Paypal</p>
+              </div>
+              <div class="footer-i d-flex">
+                <i class="fa fa-university pt-1" aria-hidden="true"></i>
+                <p> -  Bank Transfer</p>
+              </div>
+              <div class="footer-i d-flex">
+                <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+                <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                <i class="fa fa-money" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="feature-header">
+              <h4>FEATURED SERVICES</h4>
+              <a href="">Jwellary</a>
+              <a href="">E-Commerce</a>
+              <a href="">Mannequin</a>
+              <a href="">Retouching</a>
+              <a href="">Clipping</a>
+              <a href="">Crop And Resize</a>
+              <a href="">Hair Masking</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="contact-header">
+              <h4>CONTACT US</h4>
+            </div>
+            <div class="contact d-flex">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <div class="address">
+                <h6>Address</h6>
+                <p align="justify">House-16, Road-28, Block-D, Section-10, Mirpur-10, Dhaka-1216, Bangladesh</p>
+              </div>
+            </div>
+            <div class="contact d-flex">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <div class="address phone">
+                <h6>Phone Number</h6>
+                <p >+880 186592 1218</p>
+                <p >+880 186592 1218</p>
+              </div>
+            </div>
+            <div class="contact d-flex">
+              <i class="fa fa-email" aria-hidden="true"></i>
+              <div class="address phone"> 
+                <h6>E-Mail</h6>
+                <p style="padding-left: 5px;">retouchingcloud@gmail.com </p>
+              </div>
+            </div>
+            <div class="contact d-flex contact-social justify-content-between">
+              <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+             <a href=""> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+             <a href=""> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+     <!-- online -->
+
+
+
+
+
+     
+     <!-- <script src="js/jquery-1.12.4.min.js"></script> -->
+     <script src="js/slick.min.js"></script>
+     <script src="js/jquery.event.move.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>  
+     <script src="js/jquery.twentytwenty.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <script src="js/style.js"></script>
+
+    <script>
+      (function ($) {
+	$.fn.countTo = function (options) {
+		options = options || {};
+		
+		return $(this).each(function () {
+			// set options for current element
+			var settings = $.extend({}, $.fn.countTo.defaults, {
+				from:            $(this).data('from'),
+				to:              $(this).data('to'),
+				speed:           $(this).data('speed'),
+				refreshInterval: $(this).data('refresh-interval'),
+				decimals:        $(this).data('decimals')
+			}, options);
+			
+			// how many times to update the value, and how much to increment the value on each update
+			var loops = Math.ceil(settings.speed / settings.refreshInterval),
+				increment = (settings.to - settings.from) / loops;
+			
+			// references & variables that will change with each update
+			var self = this,
+				$self = $(this),
+				loopCount = 0,
+				value = settings.from,
+				data = $self.data('countTo') || {};
+			
+			$self.data('countTo', data);
+			
+			// if an existing interval can be found, clear it first
+			if (data.interval) {
+				clearInterval(data.interval);
+			}
+			data.interval = setInterval(updateTimer, settings.refreshInterval);
+			
+			// initialize the element with the starting value
+			render(value);
+			
+			function updateTimer() {
+				value += increment;
+				loopCount++;
+				
+				render(value);
+				
+				if (typeof(settings.onUpdate) == 'function') {
+					settings.onUpdate.call(self, value);
+				}
+				
+				if (loopCount >= loops) {
+					// remove the interval
+					$self.removeData('countTo');
+					clearInterval(data.interval);
+					value = settings.to;
+					
+					if (typeof(settings.onComplete) == 'function') {
+						settings.onComplete.call(self, value);
+					}
+				}
+			}
+			
+			function render(value) {
+				var formattedValue = settings.formatter.call(self, value, settings);
+				$self.html(formattedValue);
+			}
+		});
+	};
+	
+	$.fn.countTo.defaults = {
+		from: 0,               // the number the element should start at
+		to: 0,                 // the number the element should end at
+		speed: 1000,           // how long it should take to count between the target numbers
+		refreshInterval: 100,  // how often the element should be updated
+		decimals: 0,           // the number of decimal places to show
+		formatter: formatter,  // handler for formatting the value before rendering
+		onUpdate: null,        // callback method for every time the element is updated
+		onComplete: null       // callback method for when the element finishes updating
+	};
+	
+	function formatter(value, settings) {
+		return value.toFixed(settings.decimals);
+	}
+}(jQuery));
+
+    jQuery(function ($) {
+  // custom formatting example
+  $('.count-number').data('countToOptions', {
+	formatter: function (value, options) {
+	  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+	}
+  });
+  
+  // start all the timers
+  $('.timer').each(count);  
+  
+  function count(options) {
+	var $this = $(this);
+	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+	$this.countTo(options);
+  }
+});
+
+
+//gallery
+const imgContent2 = document.querySelectorAll('.img-content-hover2');
+
+function showImgContent(e) {
+  for(var i = 0; i < imgContent.length; i++) {
+    x = e.pageX;
+    y = e.pageY;
+    imgContent[i].style.transform = `translate3d(${x}px, ${y}px, 0)`;
+  }
+};
+
+document.addEventListener('mousemove', showImgContent);
+
+
+
+//compair
+//1st
+document.querySelector(".compare #compare-ip").addEventListener("input", function(e){
+    document.querySelector(".compare .before .after").style.width = (+e.target.value) + "px";
+  })
+  
+  document.querySelector(".compare #compare-ip").addEventListener("change", function(e){
+    document.querySelector(".compare .before .after").style.width = (+e.target.value) + "px";
+  })
+
+  //2nd item
+  document.querySelector(".compare2 #compare-ip").addEventListener("input", function(e){
+    document.querySelector(".compare2 .before .after").style.width = (+e.target.value) + "px";
+  })
+  
+  document.querySelector(".compare2 #compare-ip").addEventListener("change", function(e){
+    document.querySelector(".compare2 .before .after").style.width = (+e.target.value) + "px";
+  })
+  //3rd
+  document.querySelector(".compare1 #compare-ip").addEventListener("input", function(e){
+    document.querySelector(".compare1 .before .after").style.width = (+e.target.value) + "px";
+  })
+  
+  document.querySelector(".compare1 #compare-ip").addEventListener("change", function(e){
+    document.querySelector(".compare1 .before .after").style.width = (+e.target.value) + "px";
+  })
+ 
+  //4th
+  document.querySelector(".compare3 #compare-ip").addEventListener("input", function(e){
+    document.querySelector(".compare3 .before .after").style.width = (+e.target.value) + "px";
+  })
+  
+  document.querySelector(".compare3 #compare-ip").addEventListener("change", function(e){
+    document.querySelector(".compare3 .before .after").style.width = (+e.target.value) + "px";
+  })
+
+  //more slider
+  $('.more_slider2').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows:false,
+  dots:true
+});
+  </script>
+
+
+  </body>
+</html>
+
+
